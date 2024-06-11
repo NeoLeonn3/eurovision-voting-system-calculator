@@ -1,0 +1,348 @@
+{
+  "semiFinal1": [
+    {
+      "runningOrder": 1,
+      "points": 67,
+      "country": "Cyprus",
+      "rank": 6
+    },
+    {
+      "runningOrder": 2,
+      "points": 47,
+      "country": "Serbia",
+      "rank": 10
+    },
+    {
+      "runningOrder": 3,
+      "points": 119,
+      "country": "Lithuania",
+      "rank": 4
+    },
+    {
+      "runningOrder": 4,
+      "points": 124,
+      "country": "Ireland",
+      "rank": 3
+    },
+    {
+      "runningOrder": 5,
+      "points": 173,
+      "country": "Ukraine",
+      "rank": 2
+    },
+    {
+      "runningOrder": 6,
+      "points": 35,
+      "country": "Poland",
+      "rank": 12
+    },
+    {
+      "runningOrder": 7,
+      "points": 177,
+      "country": "Croatia",
+      "rank": 1
+    },
+    {
+      "runningOrder": 8,
+      "points": 3,
+      "country": "Iceland",
+      "rank": 15
+    },
+    {
+      "runningOrder": 9,
+      "points": 51,
+      "country": "Slovenia",
+      "rank": 9
+    },
+    {
+      "runningOrder": 10,
+      "points": 59,
+      "country": "Finland",
+      "rank": 7
+    },
+    {
+      "runningOrder": 11,
+      "points": 20,
+      "country": "Moldova",
+      "rank": 13
+    },
+    {
+      "runningOrder": 12,
+      "points": 11,
+      "country": "Azerbaijan",
+      "rank": 14
+    },
+    {
+      "runningOrder": 13,
+      "points": 41,
+      "country": "Australia",
+      "rank": 11
+    },
+    {
+      "runningOrder": 14,
+      "points": 58,
+      "country": "Portugal",
+      "rank": 8
+    },
+    {
+      "runningOrder": 15,
+      "points": 117,
+      "country": "Luxembourg",
+      "rank": 5
+    }
+  ],
+  "semiFinal2": [
+    {
+      "runningOrder": 1,
+      "points": 13,
+      "country": "Malta",
+      "rank": 16
+    },
+    {
+      "runningOrder": 2,
+      "points": 14,
+      "country": "Albania",
+      "rank": 15
+    },
+    {
+      "runningOrder": 3,
+      "points": 86,
+      "country": "Greece",
+      "rank": 5
+    },
+    {
+      "runningOrder": 4,
+      "points": 132,
+      "country": "Switzerland",
+      "rank": 4
+    },
+    {
+      "runningOrder": 5,
+      "points": 38,
+      "country": "Czechia",
+      "rank": 11
+    },
+    {
+      "runningOrder": 6,
+      "points": 46,
+      "country": "Austria",
+      "rank": 9
+    },
+    {
+      "runningOrder": 7,
+      "points": 36,
+      "country": "Denmark",
+      "rank": 12
+    },
+    {
+      "runningOrder": 8,
+      "points": 137,
+      "country": "Armenia",
+      "rank": 3
+    },
+    {
+      "runningOrder": 9,
+      "points": 72,
+      "country": "Latvia",
+      "rank": 7
+    },
+    {
+      "runningOrder": 10,
+      "points": 16,
+      "country": "San Marino",
+      "rank": 14
+    },
+    {
+      "runningOrder": 11,
+      "points": 54,
+      "country": "Georgia",
+      "rank": 8
+    },
+    {
+      "runningOrder": 12,
+      "points": 18,
+      "country": "Belgium",
+      "rank": 13
+    },
+    {
+      "runningOrder": 13,
+      "points": 79,
+      "country": "Estonia",
+      "rank": 6
+    },
+    {
+      "runningOrder": 14,
+      "points": 194,
+      "country": "Israel",
+      "rank": 1
+    },
+    {
+      "runningOrder": 15,
+      "points": 43,
+      "country": "Norway",
+      "rank": 10
+    },
+    {
+      "runningOrder": 16,
+      "points": 182,
+      "country": "Netherlands",
+      "rank": 2
+    }
+  ],
+  "final": [
+    {
+      "runningOrder": 1,
+      "points": 174,
+      "country": "Sweden",
+      "rank": 9
+    },
+    {
+      "runningOrder": 2,
+      "points": 453,
+      "country": "Ukraine",
+      "rank": 3
+    },
+    {
+      "runningOrder": 3,
+      "points": 117,
+      "country": "Germany",
+      "rank": 12
+    },
+    {
+      "runningOrder": 4,
+      "points": 103,
+      "country": "Luxembourg",
+      "rank": 13
+    },
+    {
+      "runningOrder": 5,
+      "country": "Netherlands"
+    },
+    {
+      "runningOrder": 6,
+      "points": 375,
+      "country": "Israel",
+      "rank": 5
+    },
+    {
+      "runningOrder": 7,
+      "points": 90,
+      "country": "Lithuania",
+      "rank": 14
+    },
+    {
+      "runningOrder": 8,
+      "points": 30,
+      "country": "Spain",
+      "rank": 22
+    },
+    {
+      "runningOrder": 9,
+      "points": 37,
+      "country": "Estonia",
+      "rank": 20
+    },
+    {
+      "runningOrder": 10,
+      "points": 278,
+      "country": "Ireland",
+      "rank": 6
+    },
+    {
+      "runningOrder": 11,
+      "points": 64,
+      "country": "Latvia",
+      "rank": 16
+    },
+    {
+      "runningOrder": 12,
+      "points": 126,
+      "country": "Greece",
+      "rank": 11
+    },
+    {
+      "runningOrder": 13,
+      "points": 46,
+      "country": "United Kingdom",
+      "rank": 18
+    },
+    {
+      "runningOrder": 14,
+      "points": 16,
+      "country": "Norway",
+      "rank": 25
+    },
+    {
+      "runningOrder": 15,
+      "points": 268,
+      "country": "Italy",
+      "rank": 7
+    },
+    {
+      "runningOrder": 16,
+      "points": 54,
+      "country": "Serbia",
+      "rank": 17
+    },
+    {
+      "runningOrder": 17,
+      "points": 38,
+      "country": "Finland",
+      "rank": 19
+    },
+    {
+      "runningOrder": 18,
+      "points": 152,
+      "country": "Portugal",
+      "rank": 10
+    },
+    {
+      "runningOrder": 19,
+      "points": 183,
+      "country": "Armenia",
+      "rank": 8
+    },
+    {
+      "runningOrder": 20,
+      "points": 78,
+      "country": "Cyprus",
+      "rank": 15
+    },
+    {
+      "runningOrder": 21,
+      "points": 591,
+      "country": "Switzerland",
+      "rank": 1
+    },
+    {
+      "runningOrder": 22,
+      "points": 27,
+      "country": "Slovenia",
+      "rank": 23
+    },
+    {
+      "runningOrder": 23,
+      "points": 547,
+      "country": "Croatia",
+      "rank": 2
+    },
+    {
+      "runningOrder": 24,
+      "points": 34,
+      "country": "Georgia",
+      "rank": 21
+    },
+    {
+      "runningOrder": 25,
+      "points": 445,
+      "country": "France",
+      "rank": 4
+    },
+    {
+      "runningOrder": 26,
+      "points": 24,
+      "country": "Austria",
+      "rank": 24
+    }
+  ]
+}
