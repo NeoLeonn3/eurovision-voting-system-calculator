@@ -41,12 +41,24 @@ You run the program through the command line (to-do: instructions), you select o
 
 * There are no official detailed results for the Rest of the World vote in 2023 and 2024 (the years where it was introduced), therefore any calculation is done with RoW points given under the current system.
 
+* The systems provided take into consideration that 26 countries are participating in the final, which is the maximum amount (the Big 5, the host/winner from the previous year and 10 countries from each semifinal). However, out of the cases we examine:
+
+  * Due to Italy (a member of the Big 5) winning and thus hosting the 2022 contest, 25 countries are participating in the final.
+  * In 2024, the Netherlands were disqualified from the final due to an EBU decision regarding an incident involving the Dutch singer Joost Klein, therefore we have 25 countries participating in the final. With results from the juries existing for the Netherlands due to their participation in the jury show the day before the final (through their semifinal performance), it should be noted that the code regarding the 2024 jury calculations is also slightly different in order to not include the Netherlands.  
+
+  Therefore in years with 25 countries, the 26th place result in each system is excluded
+
 ## To-Do List
 
 * Build the actual program
 * Create Python notebooks to compare results with the current system
+* Export results (probably to JSON or CSV/TSV)
 * Create a GUI version that is more user-friendly
 * Add future years (as long as I have detailed results for them)
+* Add reverse ranking  
+In the reverse ranking system, the countries that had the worst positions get points based on the current system (12 points to last, 10 to second-from-last, etc). Due to what I mention in Important Note #2, just making a JSON file with reverse results would not work, therefore calculation will be dealt with differently
+* Netherlands 2024 jury results  
+Although I mentioned that for year 2024 the Netherlands are ignored due to their disqualification, I might consider making an option to calculate their jury points under the different systems provided
 
 ## Things I am not planning to do
 
@@ -58,3 +70,6 @@ Although the data for the semifinals is provided, I do not intend to use it for 
 
 * "Can you test a x/y jury/televote split?"  
 I do not like how the conversation regarding a different televote split is done. The current system is 50/50 (with a bit of televote favour due to the extra set of 12 points given by the RoW vote). The majority of times people calculate the results under different splits they just adjust the final points. This is an easy calculation that you can do yourself. This tool is designed for more sophisticated calculations regarding potential televote systems. But you are free to create your own voting system by creating a new JSON file in they systems folder and adjusting the points given by jury and televote as you wish.
+
+* "Can you calculate results if x country had sent y song instead of z?"  
+I am not Dr. Strange or anyone with similar powers, therefore I cannot calculate how results would be in another parallel universe where your fav from a national final that failed to win actually managed to win.
