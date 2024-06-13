@@ -49,7 +49,7 @@ def data2024(entries, countriesResults):
   for x in entriesImport:
     index = -1
     for y in finalsResults:
-      if x["country"] == y["country"]:
+      if x["country"] == y["country"] and y["country"] != "Netherlands":
         entries.append(Entry(x["country"], x["song"], x["participant"]))
         countriesResults.append(CountryResults(x["country"], True))
         loadRankings(countriesResults[-1], detailedFinalResults)

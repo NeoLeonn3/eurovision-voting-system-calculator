@@ -16,3 +16,6 @@ class Entry:
     # Entry's televote score, both the total and a list of the scores received from each country
     self.televote = []
     self.televoteTotal = 0
+    
+    # Entry's total score
+    self.totalScore = 0
