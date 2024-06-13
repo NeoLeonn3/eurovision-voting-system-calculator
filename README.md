@@ -29,6 +29,8 @@ The initial idea I had was to test how the results would be if, while we kept th
 
 Of course no sane person would calculate this by hand. So I decided to try make a command-line program that can do it. At the same time, I tried to make it in a way that everyone can try their own system.
 
+As I explain later, the Rest of the World vote is not taken into consideration at the moment.
+
 ## How it works
 
 In the data folder you will find detailed results for the contest results for the years 2024, 2023 and 2022, meaning the full ranking of each country in the contest (how they ranked the countries that participated in the final, both jury and televote).
@@ -37,9 +39,23 @@ In the systems folder you will find the systems we are testing in JSON format. E
 
 You run the program through the command line (to-do: instructions), you select one of the supported years and then you select one of the available systems.
 
-## Important notes
+## The Rest of the World votes issue
 
-* There are no official detailed results for the Rest of the World vote in 2023 and 2024 (the years where it was introduced), therefore any calculation is done with RoW points given under the current system.
+All results regarding the rankings can be found in the official Eurovision website, except for the RoW vote, which is televote-only. There are no official detailed results for the Rest of the World vote in 2023 and 2024 (the years where it was introduced), which means the only official results we have is the top 10.
+
+For now I decided to omit the RoW vote. I could not think of any way that felt right. My original reason for making this project was to calculate results based on more countries getting points. And, to be honest, I do not think that the RoW results will make a significant difference to the final results. The RoW vote is mostly a symbolic vote whose purpose is ~~EBU making more money~~ to make Eurovision fans from non-participating countries feel included.
+
+In the results I calculated for 2024 (to-do: calculate 2023) with the current system, the only difference I noticed in placements was that Ukraine and France both scored 443 points. The tiebreak rules state:
+
+```text
+The winner of a tie is the country that received more points from the televoting, then the country that received points from more countries in the televoting, then the country that received more 12 points in the televoting, then 10 points, all the way down to 1. If the tie cannot be broken in this way, the country that performed earlier wins the tie. 
+```
+
+And with Ukraine getting more points from the televote than France, Ukraine would still be ahead of France on 3rd place.
+
+In the final result returned, I present the top 10 of the RoW vote (as part of the year data) so that if you wish to calculate the results you can do it on your own.
+
+## Important notes
 
 * The systems provided take into consideration that 26 countries are participating in the final, which is the maximum amount (the Big 5, the host/winner from the previous year and 10 countries from each semifinal). However, out of the cases we examine:
 
@@ -53,6 +69,7 @@ You run the program through the command line (to-do: instructions), you select o
 * Build the actual program
 * Create Python notebooks to compare results with the current system
 * Export results (probably to JSON or CSV/TSV)
+* Take into consideration the tie-breakers
 * Create a GUI version that is more user-friendly
 * Add future years (as long as I have detailed results for them)
 * Add reverse ranking  

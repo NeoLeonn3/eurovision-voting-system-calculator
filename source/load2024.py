@@ -33,7 +33,7 @@ def loadRankings(countryCheck, detailedFinalResults):
   countryCheck.televoteRank = [(country, rank + 1) for rank, (country, _) in enumerate(sorted_eurovision_results2)]
 
 # The function we call in order to load the entries of the final and each participating country's rankings
-def data2024(entries, countriesResults):
+def data2024(entries, countriesResults, rowRanking):
 
   # Load the JSON files and save the data needed
   entriesFile = open('./data/2024/entries.json',)
@@ -60,6 +60,13 @@ def data2024(entries, countriesResults):
       countriesResults.append(CountryResults(x["country"], False))
       loadRankings(countriesResults[-1], detailedFinalResults)
   
+  # Find the Rest of the World ranking, the last on the detailedFinalResults
+  rowResults =  detailedFinalResults[-1]["votingBreakdown"]
+  for x in rowResults:
+    if x["televotingRank"] != -1 and x["televotingRank"] != None:
+      rowRanking.append((x["country"], x["televotingRank"]))
+  
   # Close the files
   entriesFile.close()
   resultsFile.close()
+  detailedResultsFile.close()

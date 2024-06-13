@@ -41,14 +41,28 @@ def awardPoints(yearData, systemUsed, wantedResults):
             j.televoteTotal += televoteSystem[str(i+1)]
         # print(televoteTuple)
   
-  # Make the list we return, contains countries and their total points  
+  # Make the object we return, contains countries and their points (jury, televote, total)
   for x in yearData.entries:
+    
+    # Get the jury score
+    entryTuple = (x.country, x.juryTotal)
+    wantedResults.juryRanking.append(entryTuple)
+    
+    # Get the televote score
+    entryTuple = (x.country, x.televoteTotal)
+    wantedResults.televoteRanking.append(entryTuple)
+    
     # Get the total score
     x.totalScore = x.juryTotal + x.televoteTotal
     entryTuple = (x.country, x.totalScore)
-    wantedResults.append(entryTuple)
-  
-  # wantedResults = sorted(wantedResults, key=lambda x: x[1], reverse=True)
+    wantedResults.totalRanking.append(entryTuple)
+    
+  # Sort the results
+  wantedResults.juryRanking = sorted(wantedResults.juryRanking, key=lambda x: x[1], reverse=True)
+  wantedResults.televoteRanking = sorted(wantedResults.televoteRanking, key=lambda x: x[1], reverse=True)
+  wantedResults.totalRanking = sorted(wantedResults.totalRanking, key=lambda x: x[1], reverse=True)
+  # Including the RoW vote
+  yearData.rowVoteRanking = sorted(yearData.rowVoteRanking, key=lambda x: x[1])
   
   # for i in wantedResults:
   #   print("Country: " + i[0] + " | Jury score: " + str(i[1]))
