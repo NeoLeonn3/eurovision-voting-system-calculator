@@ -1,4 +1,8 @@
 {
+  "name": "Current System",
+
+  "description": "The current system that awards 12, 10 and 8-1 points to places 1 to 10",
+
   "jury": {
     "1": 12,
     "2": 10,

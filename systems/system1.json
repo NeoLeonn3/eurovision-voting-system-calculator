@@ -1,4 +1,8 @@
 {
+  "name": "System 1",
+
+  "description": "A system based on the 12-point system whose purpose is to award multiple entries with points",
+
   "jury": {
     "1": 12,
     "2": 10,

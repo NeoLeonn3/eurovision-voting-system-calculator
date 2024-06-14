@@ -1,4 +1,8 @@
 {
+  "name": "First 24",
+
+  "description": "A system where the first 24 countries get points from 24 to 1",
+
   "jury": {
     "1": 24,
     "2": 23,

@@ -1,4 +1,8 @@
 {
+  "name": "Add 11 and 9 points",
+
+  "description": "The current system, but 11 and 9 points are added, therefore the first 12 countries are awarded 12-1 points",
+
   "jury": {
     "1": 12,
     "2": 11,

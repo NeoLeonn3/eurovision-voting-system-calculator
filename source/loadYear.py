@@ -1,5 +1,3 @@
-# This file loads the results for the 2024
-
 # Imports
 import json
 from source.classes.entry import *
@@ -21,26 +19,24 @@ def loadRankings(countryCheck, detailedFinalResults):
         countryCheck.juryRank.append((tempCountry, tempJuryRank))
         countryCheck.televoteRank.append((tempCountry, tempTelevoteRank))
 
-  # Jury sort: We sort the countries based on their jury ranking
-  # Remove Netherlands (Sorry Joost :( )
-  countryCheck.juryRank = [entry for entry in countryCheck.juryRank if entry[0] != "Netherlands"]
-  # Sort the remaining tuples based on the second element
-  sorted_eurovision_results1 = sorted(countryCheck.juryRank, key=lambda x: x[1])
-  # Reassign rankings to ensure they are continuous
-  countryCheck.juryRank = [(country, rank + 1) for rank, (country, _) in enumerate(sorted_eurovision_results1)]
+  # Jury sort
+  countryCheck.juryRank = sorted(countryCheck.juryRank, key=lambda x: x[1])
+
+  # Televote sort
+  countryCheck.televoteRank = sorted(countryCheck.televoteRank, key=lambda x: x[1])
   
-  # Televote sort: Just like the jury one (Again sorry Joost :( )
-  countryCheck.televoteRank = [entry for entry in countryCheck.televoteRank if entry[0] != "Netherlands"]
-  sorted_eurovision_results2 = sorted(countryCheck.televoteRank, key=lambda x: x[1])
-  countryCheck.televoteRank = [(country, rank + 1) for rank, (country, _) in enumerate(sorted_eurovision_results2)]
 
 # The function we call in order to load the entries of the final and each participating country's rankings
-def data2024(entries, countriesResults, rowRanking):
+def loadYearData(entries, countriesResults, rowRanking, year):
+  
+  entriesString = "./data/" + year + "/entries.json"
+  resultsString = "./data/" + year + "/results.json"
+  detailedResultsString = "./data/" + year + "/detailed_results.json"
 
   # Load the JSON files and save the data needed
-  entriesFile = open('./data/2024/entries.json', encoding='UTF-8')
-  resultsFile = open('./data/2024/results.json', encoding='UTF-8')
-  detailedResultsFile = open('./data/2024/detailed_results.json', encoding='UTF-8')
+  entriesFile = open(entriesString, encoding='UTF-8')
+  resultsFile = open(resultsString, encoding='UTF-8')
+  detailedResultsFile = open(detailedResultsString, encoding='UTF-8')
   entriesImport = json.load(entriesFile)
   resultsImport = json.load(resultsFile)
   detailedResultsImport = json.load(detailedResultsFile)
@@ -51,7 +47,7 @@ def data2024(entries, countriesResults, rowRanking):
   for x in entriesImport:
     index = -1
     for y in finalsResults:
-      if x["country"] == y["country"] and y["country"] != "Netherlands":
+      if x["country"] == y["country"]:
         entries.append(Entry(x["country"], x["song"], x["participant"]))
         countriesResults.append(CountryResults(x["country"], True))
         loadRankings(countriesResults[-1], detailedFinalResults)
@@ -62,11 +58,12 @@ def data2024(entries, countriesResults, rowRanking):
       countriesResults.append(CountryResults(x["country"], False))
       loadRankings(countriesResults[-1], detailedFinalResults)
   
-  # Find the Rest of the World ranking, the last on the detailedFinalResults
-  rowResults =  detailedFinalResults[-1]["votingBreakdown"]
-  for x in rowResults:
-    if x["televotingRank"] != -1 and x["televotingRank"] != None:
-      rowRanking.append((x["country"], x["televotingRank"]))
+  # Find the Rest of the World ranking, the last on the detailedFinalResults (buto nly if the year is 2023)
+  if year == "2023":
+    rowResults =  detailedFinalResults[-1]["votingBreakdown"]
+    for x in rowResults:
+      if x["televotingRank"] != -1 and x["televotingRank"] != None:
+        rowRanking.append((x["country"], x["televotingRank"]))
   
   # Close the files
   entriesFile.close()

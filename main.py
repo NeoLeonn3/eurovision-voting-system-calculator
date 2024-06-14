@@ -1,5 +1,6 @@
 # Imports
 from source.load2024 import *
+from source.loadYear import *
 from source.awardPoints import *
 from source.classes.entry import *
 from source.classes.countryResults import *
@@ -16,15 +17,35 @@ print("Loading 2024 data...")
 data2024(year2024.entries, year2024.countriesResults, year2024.rowVoteRanking)
 print("Complete!")
 
+# Load data from 2023
+entries2023 = []
+countriesResults2023 = []
+rowRanking2023 = []
+wantedResults = Results()
+year2023 = Year(entries2023, countriesResults2023, rowRanking2023)
+print("Loading 2022 data...")
+loadYearData(year2023.entries, year2023.countriesResults, year2023.rowVoteRanking, "2023")
+print("Complete!")
+
+# Load data from 2022
+entries2022 = []
+countriesResults2022 = []
+rowRanking2022 = []
+wantedResults = Results()
+year2022 = Year(entries2022, countriesResults2022, rowRanking2022)
+print("Loading 2022 data...")
+loadYearData(year2022.entries, year2022.countriesResults, year2022.rowVoteRanking, "2022")
+print("Complete!")
+
 # Award the points for a year based on a system and return the ranked results to wantedResults 
 awardPoints(year2024, "current.json", wantedResults)
 
 # Print the results
 print("Total results (Without the RoW vote)")
 for i in wantedResults.totalRanking:
-  print("Country: " + i[0] + " | Jury score: " + str(i[1]))
+  print("Country: " + i[0] + " | Total score: " + str(i[1]))
   
-print("Rest of the World top 10")
-for x in year2024.rowVoteRanking:
-  print(str(x[1]) + ") " + x[0])
+# print("Rest of the World top 10")
+# for x in year2023.rowVoteRanking:
+#   print(str(x[1]) + ") " + x[0])
 
