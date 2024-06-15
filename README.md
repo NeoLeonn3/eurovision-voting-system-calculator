@@ -37,7 +37,17 @@ In the data folder you will find detailed results for the contest results for th
 
 In the systems folder you will find the systems we are testing in JSON format. Each JSON object contains a point system for the jury and a point system for the televote (will explain later), including the current system in place (points 1-8, 10, 12 for the first 10 countries). Based on the available systems, the results are calculated. The current system exists here for reference (and as an initial test)
 
-You run the program through the command line (to-do: instructions), you select one of the supported years and then you select one of the available systems.
+## How to run it
+
+**The current version is a bit early so some things should be fixed in order to accomodate for extra systems to be able to be added, will fix in a later version**
+
+At the current moment it is a command-line Python program. So first of all you need to download and install the latest version of Python from [here](https://www.python.org/downloads/). After that, you of course need to download the program files. After extracting the files, you go to the parent folder, open the command line/terminal and type ```main.py```  
+
+After that, you see a few messages about files being loaded and you are informed about the voting systems that are available (the name of the system, a small description and the filename that contains the voting system inside the systems folder). By selecting a number between 1 and 4 you select the appropriate system (the number displayed at the left) by typing the number. Then you select one of the three years available (2022, 2023 and 2024) by typing the year's number. Then you are asked regarding the name of the file with the exported results (if you choose not to select a filename, the results will be exported in the results.txt file).
+
+After that, the total results and the RoW top 10 (if the year is 2023 or 2024) are printed in the console. The results exported in the text file also include both jury and televote rankings.  
+
+At the moment no detailed results regarding how many points each country got from each country, but it's currently on my plans for the next update.
 
 ## The Rest of the World votes issue
 
@@ -66,7 +76,7 @@ In the final result returned, I present the top 10 of the RoW vote (as part of t
 
 ## To-Do List
 
-* Build the actual program
+* Add detailed voting results in the exported results (how many points each country got from each country)
 * Create Python notebooks to compare results with the current system
 * Export results (probably to JSON or CSV/TSV)
 * Take into consideration the tie-breakers
