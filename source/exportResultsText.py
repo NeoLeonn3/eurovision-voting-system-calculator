@@ -1,3 +1,5 @@
+# Deprecated, changed with exportResultsCSV.py
+
 # Imports
 from source.load2024 import *
 from source.loadYear import *
