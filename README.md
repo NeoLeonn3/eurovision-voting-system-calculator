@@ -43,13 +43,23 @@ At the current moment it is a Python program that it has a command-line GUI. So 
 
 After you run the command, you are given the option to select one of the systems available from the systems folder. Select one with the arrow buttons and press Enter.
 
+![scr1](https://github.com/NeoLeonn3/eurovision-voting-system-calculator/assets/40034404/4f473128-963a-4b6d-8e01-1f9beae60b6c)  
+
 Then you select the year you want. Currently, years 2022, 2023 and 2024 are supported. Again, select one with the arrow buttons and press Enter.
+
+![scr2](https://github.com/NeoLeonn3/eurovision-voting-system-calculator/assets/40034404/0507266e-ebd8-47fb-a3a9-a5cbf486474c)  
 
 Then you are in the display menu. The available options are Jury (for the jury results), Televote (for the televote results), Total (for the total results), RoW (if the year selected is 2023 or 2024 to display the Rest of the World top 10), Export to CSV (to export results in CSV files, which are generated in the exports folder of this project) and Exit (which exits the program).
 
+![scr3](https://github.com/NeoLeonn3/eurovision-voting-system-calculator/assets/40034404/a5c47922-9005-4e58-926a-273164490ce4)
+
 Selecting one of the results will show you the results. For example, the total results of 2024:
 
+![scr4](https://github.com/NeoLeonn3/eurovision-voting-system-calculator/assets/40034404/e4bd95be-19f2-490f-920f-4a9370cbba21)
+
 Exporting to CSV will show you the filenames of the files created so you can locate them easily (they are on the project's exports folder, the filenames show the system used, the year and the timestamp of the creation)
+
+![scr5](https://github.com/NeoLeonn3/eurovision-voting-system-calculator/assets/40034404/96edaeca-01ad-4db2-8da9-1afc1b265097)
 
 At the moment no detailed results regarding how many points each country got from each country, but it's currently on my plans for the next update.
 
@@ -82,9 +92,8 @@ In the final result returned, I present the top 10 of the RoW vote (as part of t
 
 * Add detailed voting results in the exported results (how many points each country got from each country)
 * Create Python notebooks to compare results with the current system
-* Export results (probably to JSON or CSV/TSV)
 * Take into consideration the tie-breakers
-* Create a GUI version that is more user-friendly
+* Create a non-command line GUI version that is more user-friendly
 * Add future years (as long as I have detailed results for them)
 * Add reverse ranking  
 In the reverse ranking system, the countries that had the worst positions get points based on the current system (12 points to last, 10 to second-from-last, etc). Due to what I mention in Important Note #2, just making a JSON file with reverse results would not work, therefore calculation will be dealt with differently
