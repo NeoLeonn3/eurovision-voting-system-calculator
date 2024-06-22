@@ -39,13 +39,17 @@ In the systems folder you will find the systems we are testing in JSON format. E
 
 ## How to run it
 
-**The current version is a bit early so some things should be fixed in order to accomodate for extra systems to be able to be added, will fix in a later version**
+At the current moment it is a Python program that it has a command-line GUI. So first of all you need to download and install the latest version of Python from [here](https://www.python.org/downloads/). After that, you of course need to download the program files. After extracting the files, you go to the parent folder, open the command line/terminal and type ```.\main.py```  (currently it is working on Windows, I am not planning on testing for Linux yet)
 
-At the current moment it is a command-line Python program. So first of all you need to download and install the latest version of Python from [here](https://www.python.org/downloads/). After that, you of course need to download the program files. After extracting the files, you go to the parent folder, open the command line/terminal and type ```main.py```  
+After you run the command, you are given the option to select one of the systems available from the systems folder. Select one with the arrow buttons and press Enter.
 
-After that, you see a few messages about files being loaded and you are informed about the voting systems that are available (the name of the system, a small description and the filename that contains the voting system inside the systems folder). By selecting a number between 1 and 4 you select the appropriate system (the number displayed at the left) by typing the number. Then you select one of the three years available (2022, 2023 and 2024) by typing the year's number. Then you are asked regarding the name of the file with the exported results (if you choose not to select a filename, the results will be exported in the results.txt file).
+Then you select the year you want. Currently, years 2022, 2023 and 2024 are supported. Again, select one with the arrow buttons and press Enter.
 
-After that, the total results and the RoW top 10 (if the year is 2023 or 2024) are printed in the console. The results exported in the text file also include both jury and televote rankings.  
+Then you are in the display menu. The available options are Jury (for the jury results), Televote (for the televote results), Total (for the total results), RoW (if the year selected is 2023 or 2024 to display the Rest of the World top 10), Export to CSV (to export results in CSV files, which are generated in the exports folder of this project) and Exit (which exits the program).
+
+Selecting one of the results will show you the results. For example, the total results of 2024:
+
+Exporting to CSV will show you the filenames of the files created so you can locate them easily (they are on the project's exports folder, the filenames show the system used, the year and the timestamp of the creation)
 
 At the moment no detailed results regarding how many points each country got from each country, but it's currently on my plans for the next update.
 

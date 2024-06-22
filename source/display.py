@@ -133,7 +133,11 @@ def drawRankingsSelector(selectedOption, yearSelected):
 # def displayRankingsSelector where the user selects which rankings to show (the options are: Jury, Televote, Total, RoW)
 def displayRankingsSelector(yearSelected):
   selectedOption = 0
-  options = ["Jury", "Televote", "Total", "RoW", "Export all to CSV", "Exit"]
+  if yearSelected < 2023:
+    options = ["Jury", "Televote", "Total", "Export all to CSV", "Exit"]
+  else:
+    options = ["Jury", "Televote", "Total", "RoW", "Export all to CSV", "Exit"]
+    
   drawRankingsSelector(selectedOption, yearSelected)
   while True:
     if os.name == 'nt':  # Windows-specific

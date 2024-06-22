@@ -1,5 +1,6 @@
 import csv
 import datetime
+import os
 
 from source.load2024 import *
 from source.display import clearScreen
@@ -14,12 +15,19 @@ from source.classes.results import *
 from source.classes.system import *
 
 
-def exportResultsCSV(yearData, results, yearNumber):
-  juryFilename = "jury_" + str(yearNumber) + "_" + datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".csv"
-  televoteFilename = "televote_" + str(yearNumber) + "_" + datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".csv"
-  totalFilename = "total_" + str(yearNumber) + "_" + datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".csv"
+def exportResultsCSV(yearData, results, yearNumber, systemName):
+  
+  # create folder exports if it doesn't exist
+  if not os.path.exists("exports"):
+    os.makedirs("exports")
+    
+  systemUsed = os.path.splitext(systemName)[0]
+  
+  juryFilename = f"exports/{systemUsed}_{yearNumber}_jury_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.csv"
+  televoteFilename = f"exports/{systemUsed}_{yearNumber}_televote_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.csv"
+  totalFilename = f"exports/{systemUsed}_{yearNumber}_total_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.csv"
   if yearNumber > 2022:
-    rowFilename = "row_" + str(yearNumber) + "_" + datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".csv"
+      rowFilename = f"exports/{systemUsed}_{yearNumber}_row_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.csv"
   
   juryFile = open(juryFilename, "w", encoding='utf-8', newline='')
   televoteFile = open(televoteFilename, "w", encoding='utf-8', newline='')

@@ -60,7 +60,7 @@ if yearSelector == 2022:
     if resSelector in range(0, 3):
       drawRankings(resSelector, 2022, year2022, wantedResults)
     elif (resSelector == 3):
-      exportResultsCSV(year2022, wantedResults, yearSelector)
+      exportResultsCSV(year2022, wantedResults, yearSelector, votingSystems[systemSelector].filename)
   
 
 elif yearSelector == 2023:
@@ -72,7 +72,7 @@ elif yearSelector == 2023:
     if resSelector in range(0, 4):
       drawRankings(resSelector, 2023, year2023, wantedResults)
     elif (resSelector == 4):
-      exportResultsCSV(year2023, wantedResults, yearSelector)
+      exportResultsCSV(year2023, wantedResults, yearSelector, votingSystems[systemSelector].filename)
       
 
 elif yearSelector == 2024:
@@ -85,7 +85,7 @@ elif yearSelector == 2024:
     if resSelector in range(0, 4):
       drawRankings(resSelector, 2024, year2024, wantedResults)
     elif (resSelector == 4):
-      exportResultsCSV(year2024, wantedResults, yearSelector)
+      exportResultsCSV(year2024, wantedResults, yearSelector, votingSystems[systemSelector].filename)
 
 else:
   print("Unexpected error")
